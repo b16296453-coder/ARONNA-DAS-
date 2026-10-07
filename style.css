@@ -1,0 +1,97 @@
+:root{
+  --maroon:#7a1010;
+  --deep:#3b0a0a;
+  --gold:#ffd166;
+  --cream:#fff4d6;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100%}
+body{
+  font-family:"Hind Siliguri",sans-serif;
+  color:var(--cream);
+  background:radial-gradient(circle at 50% 30%,#a61c1c 0%,var(--maroon) 40%,var(--deep) 100%) fixed;
+  display:flex;flex-direction:column;min-height:100vh;
+}
+
+/* উপরের অংশ */
+.topbar{
+  display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
+  gap:10px;padding:14px 18px;
+  background:rgba(0,0,0,.25);border-bottom:2px solid var(--gold);
+}
+.title{
+  font-family:"Tiro Bangla",serif;font-weight:400;text-align:center;
+  font-size:clamp(1.1rem,3.6vw,2.2rem);color:var(--gold);
+  text-shadow:0 2px 6px rgba(0,0,0,.5);
+}
+.online{
+  justify-self:start;display:flex;align-items:center;gap:6px;
+  font-size:clamp(.75rem,2.4vw,1rem);
+  background:rgba(255,255,255,.1);padding:6px 10px;border-radius:999px;
+}
+.dot{width:10px;height:10px;border-radius:50%;background:#3ddc84;box-shadow:0 0 8px #3ddc84;animation:pulse 1.5s infinite}
+@keyframes pulse{50%{opacity:.35}}
+.fb{
+  justify-self:end;color:#fff;background:#1877f2;
+  width:42px;height:42px;border-radius:50%;
+  display:grid;place-items:center;transition:transform .2s;
+}
+.fb:hover{transform:scale(1.12)}
+
+/* মাঝের অংশ */
+.center{
+  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:24px 14px;
+}
+.big{
+  font-family:"Tiro Bangla",serif;font-weight:400;
+  font-size:clamp(2.2rem,8vw,4.5rem);color:var(--gold);
+  text-shadow:0 3px 10px rgba(0,0,0,.6);margin-bottom:22px;
+}
+.countdown{display:flex;gap:clamp(8px,2.5vw,22px);flex-wrap:wrap;justify-content:center}
+.box{
+  min-width:clamp(64px,18vw,120px);padding:14px 8px;
+  background:rgba(0,0,0,.35);border:2px solid var(--gold);border-radius:14px;
+  display:flex;flex-direction:column;
+}
+.num{font-size:clamp(1.8rem,7vw,3.4rem);font-weight:700;color:#fff}
+.lbl{font-size:clamp(.8rem,2.5vw,1.1rem);color:var(--gold)}
+.sub{
+  margin-top:34px;font-family:"Tiro Bangla",serif;font-weight:400;
+  font-size:clamp(1.4rem,5vw,2.3rem);color:var(--cream);
+}
+.sub-count{margin-top:6px;font-size:clamp(.95rem,3vw,1.3rem);color:var(--gold)}
+
+/* ডান পাশে ঢাক */
+.dhak{
+  position:fixed;right:12px;top:50%;transform:translateY(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  background:rgba(0,0,0,.35);border:2px solid var(--gold);border-radius:16px;
+  color:var(--cream);padding:8px 10px;cursor:pointer;font-family:inherit;font-size:.8rem;
+  transition:transform .15s;
+}
+.dhak:hover{transform:translateY(-50%) scale(1.08)}
+.dhak.hit svg{animation:hit .35s ease-out}
+@keyframes hit{30%{transform:scale(1.2) rotate(-6deg)}60%{transform:scale(.95) rotate(4deg)}}
+
+/* নিচের অংশ */
+.bottom{background:rgba(0,0,0,.35);border-top:2px solid var(--gold);padding:16px 14px 12px;text-align:center}
+.songs{max-width:520px;margin:0 auto 12px}
+.songs h4{font-family:"Tiro Bangla",serif;font-weight:400;font-size:1.3rem;color:var(--gold);margin-bottom:8px}
+.songs ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.songs li{
+  display:flex;align-items:center;gap:12px;
+  background:rgba(255,255,255,.08);border-radius:10px;padding:8px 12px;
+}
+.songs li.playing{background:rgba(255,209,102,.25);border:1px solid var(--gold)}
+.play{
+  width:36px;height:36px;border-radius:50%;border:none;cursor:pointer;
+  background:var(--gold);color:var(--deep);font-size:1rem;flex:none;
+}
+.credit{font-size:.85rem;opacity:.85;letter-spacing:.5px}
+
+@media (max-width:480px){
+  .topbar{padding:10px}
+  .dhak span{display:none}
+  .dhak{padding:6px}
+}

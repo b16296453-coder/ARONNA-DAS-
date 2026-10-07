@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>শালিখা সার্বজনীন দুর্গা মন্দির</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Tiro+Bangla&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- উপরের অংশ -->
+  <header class="topbar">
+    <div class="online" title="এখন ওয়েবসাইটে কতজন আছেন">
+      <span class="dot"></span>
+      <span id="onlineCount">১</span> জন অনলাইনে
+    </div>
+
+    <h1 class="title">শালিখা সার্বজনীন দুর্গা মন্দির</h1>
+
+    <a class="fb" href="https://www.facebook.com/share/1C4vHcS65b/" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true">
+        <path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/>
+      </svg>
+    </a>
+  </header>
+
+  <!-- মাঝের অংশ -->
+  <main class="center">
+    <h2 class="big">মহালয়া আসছে</h2>
+
+    <div class="countdown" id="mahalayaCountdown">
+      <div class="box"><span class="num" data-u="d">০</span><span class="lbl">দিন</span></div>
+      <div class="box"><span class="num" data-u="h">০</span><span class="lbl">ঘণ্টা</span></div>
+      <div class="box"><span class="num" data-u="m">০</span><span class="lbl">মিনিট</span></div>
+      <div class="box"><span class="num" data-u="s">০</span><span class="lbl">সেকেন্ড</span></div>
+    </div>
+
+    <h3 class="sub">ষষ্ঠী পূজা আসছে</h3>
+    <p class="sub-count" id="shashthiText"></p>
+  </main>
+
+  <!-- ডান পাশে ঢাক -->
+  <button class="dhak" id="dhakBtn" aria-label="ঢাক বাজান">
+    <svg viewBox="0 0 120 120" width="64" height="64" aria-hidden="true">
+      <ellipse cx="60" cy="28" rx="44" ry="12" fill="#f5deb3" stroke="#7a3b0c" stroke-width="3"/>
+      <path d="M16 28 Q8 60 16 92 Q60 112 104 92 Q112 60 104 28 Q60 44 16 28Z" fill="#c0392b" stroke="#7a3b0c" stroke-width="3"/>
+      <path d="M22 44 L98 44 M20 60 L100 60 M22 76 L98 76" stroke="#f5deb3" stroke-width="3" stroke-dasharray="8 6"/>
+      <path d="M98 12 L112 4 M104 20 L118 14" stroke="#7a3b0c" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+    <span>ঢাক বাজান</span>
+  </button>
+
+  <!-- নিচের অংশ -->
+  <footer class="bottom">
+    <section class="songs">
+      <h4>গানের তালিকা</h4>
+      <ul id="songList">
+        <li data-src="1.mp3">
+          <button class="play" aria-label="গান ১ চালান">▶</button>
+          <span class="name">গান ১</span>
+        </li>
+        <li data-src="2.mp3">
+          <button class="play" aria-label="গান ২ চালান">▶</button>
+          <span class="name">গান ২</span>
+        </li>
+      </ul>
+    </section>
+    <p class="credit">Created by ARONNA DAS</p>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
